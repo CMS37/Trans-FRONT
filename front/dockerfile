@@ -1,0 +1,34 @@
+FROM node:latest
+
+WORKDIR /app/front_server
+
+COPY . /app/front_server/
+
+RUN npm install
+
+ARG NEXT_PUBLIC_CLIENT_ID \
+    NEXT_PUBLIC_CLIENT_SECRET \
+    NEXT_PUBLIC_REDIRECT_URL \
+    NEXT_PUBLIC_FRONT_URL \
+    NEXT_PUBLIC_API_URL \
+    NEXT_PUBLIC_WEBSOCKET_URL \
+    NEXT_PUBLIC_API_DIRECT_URL
+
+RUN npm run build
+
+CMD ["npm", "run", "start"]
+# CMD ["npm", "run", "dev"]
+# CMD ["tail", "-f", "/dev/null"]
+
+######dumb-init 사용시
+
+# FROM node:latest
+
+# WORKDIR /app/front_server
+
+# COPY . /app/front_server/
+
+# RUN apt install -y dumb-init
+# RUN npm install
+
+# CMD ["/usr/bin/dumb-init", "--", "npm", "run", "dev"]

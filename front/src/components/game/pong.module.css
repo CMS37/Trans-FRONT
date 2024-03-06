@@ -1,0 +1,78 @@
+
+.pongCanvas {
+	left: 50%;
+}
+
+.profileBoxInGame {
+	position: absolute;
+	top: 60%;
+	left: 0%;
+	transform: translate(0%, 0%);
+
+	background-color: rgba(135, 206, 235, 0.2);
+	border-radius: 20px;
+	border: 5px solid rgba(135, 207, 235, 0.2);
+	width: 100%;
+	height: 40%;
+ 	align-items: center;
+  	flex-direction: column;
+}
+
+.profileBoxGameEnd {
+	position: absolute;
+	top: 25%;
+	left: 0%;
+	transform: translate(0%, 0%);
+
+	background-color: rgba(135, 206, 235, 0.2);
+	border-radius: 20px;
+	border: 5px solid rgba(135, 207, 235, 0.2);
+	width: 100%;
+	height: 50%;
+	align-items: center;
+	flex-direction: column;
+}
+
+.winLose {
+    width: 75%;
+    text-align-last: justify;
+}
+
+.userName {
+  font-weight: bold;
+  color: white;
+}
+
+.scoreContainer {
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	left: 30%;
+	width: 40%;
+	height: 100%;
+	border-radius: 50%;
+	align-items: center;
+}
+
+.scoreText {
+	top: 0%;
+	height: 50%;
+	border-radius: 50%;
+}
+
+.playerContainer1 {
+	position: absolute;
+	left: 10%;
+	width: 20%;
+	height: 65%;
+	border-radius: 50%;
+}
+
+.playerContainer2 {
+	position: absolute;
+	left: 70%;
+	width: 20%;
+	height: 65%;
+	border-radius: 50%;
+}
+
